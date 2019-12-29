@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------
-  Arduino library based on Adafruit_Neomatrix but modified to work with SmartMatrix
+  Arduino library based on Adafruit_Neomatrix
   by Marc MERLIN <marc_soft@merlins.org>
 
   Original notice and license from Adafruit_Neomatrix:
@@ -18,27 +18,23 @@
   <http://www.gnu.org/licenses/>.
   --------------------------------------------------------------------*/
 
-#ifndef _FastLED_SPITFT_GFX_H_
-#define _FastLED_SPITFT_GFX_H_
+#ifndef _FastLED_TFTWrapper_GFX_H_
+#define _FastLED_TFTWrapper_GFX_H_
 #include "Framebuffer_GFX.h"
-#include "Adafruit_SPITFT.h"
+#include "TFT_LinuxWrapper.h"
 #include "FastLED.h"
 
-class FastLED_SPITFT_GFX : public Framebuffer_GFX {
+class FastLED_TFTWrapper_GFX : public Framebuffer_GFX {
   public:
-    FastLED_SPITFT_GFX(CRGB *, uint16_t, uint16_t, uint16_t, uint16_t, Adafruit_SPITFT* spitft, uint8_t rot = 0);
-    uint8_t rotation;
+    FastLED_TFTWrapper_GFX(CRGB *, uint16_t, uint16_t, uint16_t, uint16_t, TFT_LinuxWrapper* tft);
     void show();
-    void begin();
 
   protected:
-    Adafruit_SPITFT* _spitft;
+    TFT_LinuxWrapper* _tft;
 
   private:
     const uint16_t _tftw, _tfth;
-    // temporary storage for rotation and 24bit to 16bit convertion
-    uint16_t *_line;
 };
 
-#endif // _FastLED_SPITFT_GFX_H_
+#endif // _FastLED_TFTWrapper_GFX_H_
 // vim:sts=4:sw=4
