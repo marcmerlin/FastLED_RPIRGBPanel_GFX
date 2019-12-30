@@ -26,7 +26,7 @@
 
 class FastLED_TFTWrapper_GFX : public Framebuffer_GFX {
   public:
-    FastLED_TFTWrapper_GFX(CRGB *, uint16_t, uint16_t, uint16_t, uint16_t, TFT_LinuxWrapper* tft);
+    FastLED_TFTWrapper_GFX(CRGB *, uint16_t, uint16_t, TFT_LinuxWrapper* tft);
     void show();
 
   protected:

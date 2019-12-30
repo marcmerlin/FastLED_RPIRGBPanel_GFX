@@ -10,8 +10,8 @@
 #include <FastLED_TFTWrapper_GFX.h>
 
 FastLED_TFTWrapper_GFX::FastLED_TFTWrapper_GFX(CRGB *__fb, const uint16_t fbw, const uint16_t fbh,
-	const uint16_t tftw, const uint16_t tfth, TFT_LinuxWrapper* tft): 
-  Framebuffer_GFX(__fb, fbw, fbh, NULL), _tftw(tftw), _tfth(tfth) {
+	TFT_LinuxWrapper* tft):
+  Framebuffer_GFX(__fb, fbw, fbh, NULL), _tftw(fbw), _tfth(fbh) {
       _tft = tft;
 }
 
