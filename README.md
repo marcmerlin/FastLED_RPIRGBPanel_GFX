@@ -1,5 +1,5 @@
-FastLED_RPIRGBPanel_GFX: Display Wrapper for ArduinoOnPC
-=========================================================
+FastLED_RPIRGBPanel_GFX: ArduinoOnPC Display Wrapper for Raspberry Pi
+=====================================================================
 
 This is a display driver for Framebuffer::GFX that displays on RGB Panels using
 https://github.com/hzeller/rpi-rgb-led-matrix
