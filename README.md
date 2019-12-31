@@ -4,6 +4,9 @@ FastLED_RPIRGBPanel_GFX: ArduinoOnPC Display Wrapper for Raspberry Pi
 This is a display driver for Framebuffer::GFX that displays on RGB Panels using
 https://github.com/hzeller/rpi-rgb-led-matrix
 
+This display driver is meant to be used with
+https://github.com/marcmerlin/ArduinoOnPc-FastLED-GFX-LEDMatrix
+
 This allows running arduino code on RGB Panel diplays bigger than 128x64 which 
 is the biggest currently supported on arduino chips that are usually limited in
 CPU speed, IO pins and/or RAM.
