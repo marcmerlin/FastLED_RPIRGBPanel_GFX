@@ -18,23 +18,30 @@
   <http://www.gnu.org/licenses/>.
   --------------------------------------------------------------------*/
 
-#ifndef _FastLED_TFTWrapper_GFX_H_
-#define _FastLED_TFTWrapper_GFX_H_
+#ifndef _FastLED_RPIRGBPanel_GFX_H_
+#define _FastLED_RPIRGBPanel_GFX_H_
 #include "Framebuffer_GFX.h"
-#include "TFT_LinuxWrapper.h"
 #include "FastLED.h"
 
-class FastLED_TFTWrapper_GFX : public Framebuffer_GFX {
+// https://github.com/hzeller/rpi-rgb-led-matrix
+#undef min
+#undef max
+#include <led-matrix.h>
+using rgb_matrix::RGBMatrix;
+using rgb_matrix::Canvas;
+
+class FastLED_RPIRGBPanel_GFX : public Framebuffer_GFX {
   public:
-    FastLED_TFTWrapper_GFX(CRGB *, uint16_t, uint16_t, TFT_LinuxWrapper* tft);
+    FastLED_RPIRGBPanel_GFX(CRGB *, uint16_t, uint16_t);
+    void setCanvas(Canvas *canvas) { _canvas = canvas; }
     void show();
 
   protected:
-    TFT_LinuxWrapper* _tft;
+    Canvas *_canvas;
 
   private:
-    const uint16_t _tftw, _tfth;
+    const uint16_t _fbw, _fbh;
 };
 
-#endif // _FastLED_TFTWrapper_GFX_H_
+#endif // _FastLED_RPIRGBPanel_GFX_H_
 // vim:sts=4:sw=4
