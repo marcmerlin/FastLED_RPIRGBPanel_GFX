@@ -7,6 +7,10 @@ trio of APIs: FastLED, Adafruit::GFX (via Adafruit::NeoMatrix compatibility usin
 and LEDMatrix compatibility too. To get example demo code, go to:
 https://github.com/marcmerlin/FastLED_NeoMatrix_SmartMatrix_LEDMatrix_GFX_Demos
 
+Please see this code to see how to use the driver:
+* https://github.com/marcmerlin/FastLED_NeoMatrix_SmartMatrix_LEDMatrix_GFX_Demos/blob/022257656e2f1beabe327e88bb96747c0fc955f9/neomatrix_config.h#L262
+* https://github.com/marcmerlin/FastLED_NeoMatrix_SmartMatrix_LEDMatrix_GFX_Demos/blob/022257656e2f1beabe327e88bb96747c0fc955f9/neomatrix_config.h#L697
+
 This display driver is meant to be used with
 https://github.com/marcmerlin/ArduinoOnPc-FastLED-GFX-LEDMatrix
 
