@@ -21,7 +21,7 @@ void FastLED_RPIRGBPanel_GFX::show() {
 	    uint8_t r = pixel.r;
 	    uint8_t g = pixel.g;
 	    uint8_t b = pixel.b;
-	    _canvas->SetPixel(x, y, r, g, b);
+	    _matrix->SetPixel(x, y, r, g, b);
 	}
     }
 }
