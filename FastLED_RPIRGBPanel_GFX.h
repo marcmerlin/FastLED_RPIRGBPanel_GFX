@@ -32,7 +32,7 @@ using rgb_matrix::RGBMatrix;
 class FastLED_RPIRGBPanel_GFX : public Framebuffer_GFX {
   public:
     FastLED_RPIRGBPanel_GFX(CRGB *, uint16_t, uint16_t);
-    void setCanvas(RGBMatrix *rgbmatrix) { _matrix = rgbmatrix; }
+    void setMatrix(RGBMatrix *rgbmatrix) { _matrix = rgbmatrix; }
     void setBrightness(int b) { _matrix->SetBrightness(b); };
     void show();
 
