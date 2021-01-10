@@ -33,7 +33,8 @@ class FastLED_RPIRGBPanel_GFX : public Framebuffer_GFX {
   public:
     FastLED_RPIRGBPanel_GFX(CRGB *, uint16_t, uint16_t);
     void setMatrix(RGBMatrix *rgbmatrix) { _matrix = rgbmatrix; }
-    void setBrightness(int b) { _matrix->SetBrightness(b); };
+    // FrameBuffer::GFX brightness is 0 to 255, rpi-rgb-panel is 0 to 100
+    void setBrightness(int b) { _matrix->SetBrightness(b/2.5); };
     void show();
 
   protected:
