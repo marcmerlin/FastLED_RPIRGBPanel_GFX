@@ -15,6 +15,7 @@ FastLED_RPIRGBPanel_GFX::FastLED_RPIRGBPanel_GFX(CRGB *__fb, const uint16_t fbw,
 
 void FastLED_RPIRGBPanel_GFX::show() {
     Framebuffer_GFX::showfps();
+
     for (uint16_t y = 0; y < _fbh; y++) {
 	for (uint16_t x = 0; x < _fbw; x++) {
 	    CRGB pixel = _fb[y*matrixWidth + x];
@@ -22,6 +23,8 @@ void FastLED_RPIRGBPanel_GFX::show() {
 	    uint8_t g = pixel.g;
 	    uint8_t b = pixel.b;
 	    _matrix->SetPixel(x, y, r, g, b);
+	    // 90 degree rotation test
+	    //_matrix->SetPixel(191-y, x, r, g, b);
 	}
     }
 }
